@@ -1,4 +1,4 @@
-# travel-smart
+# travel_smart
 
 ## Project setup
 ```
