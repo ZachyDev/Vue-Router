@@ -4,8 +4,8 @@
      <router-link to="/">Home</router-link> |
      <router-link to="/about">About</router-link> |
      <router-link to="/brazil">Brazil</router-link> |
-       <router-link to="/hawaii">Hawaii</router-link> |
-     <router-link to="/jamaica">Jamaica</router-link> |
+     <router-link to="/hawaii">Hawaii</router-link> |
+     <router-link to="/kenya">Kenya</router-link> |
      <router-link to="/panama">Panama</router-link>
     </div>
     <router-view />
@@ -28,6 +28,7 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  padding: 10px;
 }
 
 #nav a.router-link-exact-active {

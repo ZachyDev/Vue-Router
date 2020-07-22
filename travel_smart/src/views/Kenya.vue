@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h2>Jamaica</h2>
+      <h2>Welcome to Kenya</h2>
   </div>
 </template>
 
