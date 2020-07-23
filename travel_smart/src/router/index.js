@@ -33,6 +33,11 @@ const routes = [
     path: "/panama",
     name: "panama",
     component: () => import(/*webpackChunkName: "Panama" */ '../views/Panama')
+  },
+  {
+    path: "/details",
+    name: "DestinationDetails",
+    component: () => import(/*webpackChunkName: "Panama" */ '../views/DestinationDetails.vue')
   }
 
 ]

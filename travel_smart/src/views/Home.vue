@@ -3,11 +3,11 @@
     <h1>Travel Smart<span>__</span></h1> 
     <div class="destinations">
       <div :key="destination.name" v-for="destination in destinations">
-        <router-link :to="destination.slug">
+        <router-link :to="{ name: 'DestinationDetails',params:{ id: destination.id }}">
           {{ destination.name }}
         </router-link>
         <figure>
-          <router-link :to="destination.name">
+          <router-link :to="{name: 'DestinationDetails',params: { id: destination.id }}">
             <img :src="require(`@/assets/${ destination.image }`)" alt="destination.name">
           </router-link>
         </figure>
