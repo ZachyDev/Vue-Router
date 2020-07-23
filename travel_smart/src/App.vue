@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-     <router-link to="/">Home</router-link> |
-     <router-link to="/brazil">Brazil</router-link> |
-     <router-link to="/hawaii">Hawaii</router-link> |
-     <router-link to="/kenya">Kenya</router-link> |
-     <router-link to="/panama">Panama</router-link>
-    </div>
-    <router-view />
+      <router-link to="/">Home</router-link>
+      <router-link to="/brazil">Brazil</router-link>
+      <router-link to="/kenya">Kenya</router-link>
+      <router-link to="/hawaii">Hawaii</router-link>
+      <router-link to="/panama">Panama</router-link>
+      <router-view />
+  </div>
   </div>
 </template>
 
@@ -28,6 +28,7 @@
   font-weight: bold;
   color: #2c3e50;
   padding: 10px;
+  text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
