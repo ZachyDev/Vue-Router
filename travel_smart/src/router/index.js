@@ -38,6 +38,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  linkExactActiveClass: "travel-smart-active-class",
   mode: 'history',
   routes
 });
