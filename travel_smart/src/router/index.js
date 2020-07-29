@@ -10,13 +10,15 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    props: true
   },
     // Destination Details route
     {
-      path: '/details/:id',
+      path: '/details/:slug',
       name: 'DestinationDetails',
-      component: () => import(/*webpackChunkName: "Details"*/ '../views/Destinations')
+      component: () => import(/*webpackChunkName: "Details"*/ '../views/Destinations'),
+      props: true
     }
 ];
 
