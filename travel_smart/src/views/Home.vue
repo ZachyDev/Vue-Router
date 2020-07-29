@@ -39,4 +39,11 @@ export default {
 img{
   max-width: 200px;
 }
+a{
+  color: teal;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
 </style>

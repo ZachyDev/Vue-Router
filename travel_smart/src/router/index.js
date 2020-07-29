@@ -12,30 +12,6 @@ const routes = [
     name: 'Home',
     component: Home
   },
-    // Brazil route
-    {
-      path: '/brazil',
-      name: 'Brazil',
-      component: () => import(/*webpackChunkName: "Brazil"*/ '../views/Brazil')
-    },
-     // Kenya route
-     {
-      path: '/kenya',
-      name: 'Kenya',
-      component: () => import(/*webpackChunkName: "Kenya"*/ '../views/Kenya')
-    },
-     // Hawaii route
-     {
-      path: '/hawaii',
-      name: 'Hawaii',
-      component: () => import(/*webpackChunkName: "Hawaii"*/ '../views/Hawaii')
-    },
-     // Panama route
-     {
-      path: '/panama',
-      name: 'Panama',
-      component: () => import(/*webpackChunkName: "Panama"*/ '../views/Panama')
-    },
     // Destination Details route
     {
       path: '/details/:id',
