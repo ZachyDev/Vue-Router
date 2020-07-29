@@ -39,7 +39,7 @@ img {
 }
 p {
   margin: 0 40px;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
 }
 </style>
