@@ -1,4 +1,5 @@
 <template>
+<div>
   <section class="destination">
     <h1>{{ destination.name}}</h1>
     <div class="destination-details">
@@ -6,13 +7,38 @@
       <p>{{destination.description}}</p>
     </div>
   </section>
+  <section class="experiences">
+    <h2>Top experiences in {{ destination.name}}</h2>
+    <div class="cards">
+      <div 
+      :key="experience.name" 
+      v-for="experience in destination.experiences" 
+      class="card"
+      >
+      <router-link :to="{
+        name: 'experienceDetails',
+        params: {experienceSlug: experience.slug}
+      }"
+      >
+      </router-link>
+        <img :src="require(`@/assets/${experience.image}`)" :alt="experience.name">
+        <span class="card-text">
+          {{experience.name}}
+        </span>
+      </div>
+    </div>
+    <router-view :key="$route.path" />
+  </section>
+</div>
 </template>
 
 <script>
 import store from '@/store.js';
 export default {
   data(){
-    return {};
+    return {
+      experiences: store.experiences
+    };
   },
   props: {
     slug: {
@@ -45,5 +71,28 @@ p {
   margin: 0 40px;
   font-size: 16px;
   text-align: center;
+}
+.cards{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 10px;
+}
+.cards img{
+  max-width: 200px;
+  width: 100%;
+}
+.card{
+  padding: 0 20px;
+  position: relative;
+}
+.card-text{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
 }
 </style>
