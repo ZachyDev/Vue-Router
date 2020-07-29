@@ -15,21 +15,21 @@ export default {
 </script>
 
 <style scoped>
+  #nav {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    background: #2c3e50;
+    margin: -8px;
 
-#nav {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  padding: 10px;
-  text-decoration: none;
-}
-
-#nav a.travel-smart-active-class {
-  color: rgb(204, 147, 4);
-}
+  }
+  #nav a {
+    font-weight: bold;
+    color: #eee;
+    padding: 10px;
+    text-decoration: none;
+  }
+  #nav a.travel-smart-active-class {
+    color: rgb(204, 147, 4);
+  }
 </style>

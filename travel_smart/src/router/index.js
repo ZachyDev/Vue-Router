@@ -1,51 +1,53 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home';
+// connect vue and vue-router
 Vue.use(VueRouter);
 
+// routes array
 const routes = [
-  // route home
+  // Home route
   {
-    path: "/",
-    name: "Home",
+    path: '/',
+    name: 'Home',
     component: Home
   },
-  // router brazil
-  {
-    path: "/brazil",
-    name: "brazil",
-    component: () => import(/*webpackChunkName: "Brazil" */ '../views/Brazil')
-  },
-   // router kenya
-   {
-    path: "/kenya",
-    name: "kenya",
-    component: () => import(/*webpackChunkName: "Kenya" */ '../views/Kenya')
-  },
-   // router hawaii
-   {
-    path: "/hawaii",
-    name: "hawaii",
-    component: () => import(/*webpackChunkName: "Hawaii" */ '../views/Hawaii')
-  },
-   // router panama
-   {
-    path: "/panama",
-    name: "panama",
-    component: () => import(/*webpackChunkName: "Panama" */ '../views/Panama')
-  },
-  {
-    path: "/details:id",
-    name: "DestinationDetails",
-    component: () => import(/*webpackChunkName: "Panama" */ '../views/DestinationDetails.vue')
-  }
+    // Brazil route
+    {
+      path: '/brazil',
+      name: 'Brazil',
+      component: () => import(/*webpackChunkName: "Brazil"*/ '../views/Brazil')
+    },
+     // Kenya route
+     {
+      path: '/kenya',
+      name: 'Kenya',
+      component: () => import(/*webpackChunkName: "Kenya"*/ '../views/Kenya')
+    },
+     // Hawaii route
+     {
+      path: '/hawaii',
+      name: 'Hawaii',
+      component: () => import(/*webpackChunkName: "Hawaii"*/ '../views/Hawaii')
+    },
+     // Panama route
+     {
+      path: '/panama',
+      name: 'Panama',
+      component: () => import(/*webpackChunkName: "Panama"*/ '../views/Panama')
+    },
+    // Destination Details route
+    {
+      path: '/details/:id',
+      name: 'DestinationDetails',
+      component: () => import(/*webpackChunkName: "Details"*/ '../views/Destinations')
+    }
+];
 
-]
-
+// create a vue-router instance
 const router = new VueRouter({
   linkExactActiveClass: "travel-smart-active-class",
   mode: 'history',
   routes
 });
-
 export default router;
